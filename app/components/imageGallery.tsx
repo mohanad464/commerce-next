@@ -40,7 +40,7 @@ export default function ImageGallery({ images }: IAppProps) {
           className="h-full w-full object-cover object-center"
         />
 
-        <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white"></span>
+        <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">SALE</span>
       </div>
     </div>
   );
