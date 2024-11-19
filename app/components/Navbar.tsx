@@ -1,10 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import { ShoppingBag } from "lucide-react";
 import { useShoppingCart } from "use-shopping-cart";
 
 const links = [
@@ -48,7 +47,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex divide-x border-r sm:border-1">
+        <div className="flex divide-x border-r sm:border-l">
           <Button
             variant={"outline"}
             onClick={() => handleCartClick()}

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface simplifiedProduct {
   _id: string;
   imageUrl: string;
@@ -15,5 +16,5 @@ export interface fullProduct {
   categoryName: string;
   name: string;
   description: string;
-  price_id:string
+  price_id: string;
 }

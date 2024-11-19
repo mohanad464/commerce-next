@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -25,8 +26,8 @@ export default function AddToBag({
 
   const product = {
     name: name,
-    price: price,
     description: description,
+    price: price,
     currency: currency,
     image: urlFor(image).url(),
     price_id: price_id,
@@ -34,6 +35,7 @@ export default function AddToBag({
   return (
     <Button
       onClick={() => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         addItem(product), handleCartClick();
       }}
     >

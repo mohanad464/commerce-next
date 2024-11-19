@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url"
 
 export const client = createClient({
   projectId: "vsglhiyp",
   dataset: "production",
-  apiVersion: "2022-03-25",
+  apiVersion: "2024-11-25",
   useCdn: true,
 });
 

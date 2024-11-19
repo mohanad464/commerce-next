@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Image from "next/image";
 import { urlFor } from "../lib/sanity";
 import { useState } from "react";
 
-interface IAppProps {
+interface iAppProps {
   images: any;
 }
 
-export default function ImageGallery({ images }: IAppProps) {
+export default function ImageGallery({ images }: iAppProps) {
   const [bigImage, setBigImage] = useState(images[0]);
 
   const handleSmallImageClick = (image: any) => {
@@ -23,7 +24,7 @@ export default function ImageGallery({ images }: IAppProps) {
               src={urlFor(image).url()}
               width={200}
               height={200}
-              alt="Photo"
+              alt="photo"
               className="h-full w-full object-cover object-center cursor-pointer"
               onClick={() => handleSmallImageClick(image)}
             />
@@ -40,7 +41,9 @@ export default function ImageGallery({ images }: IAppProps) {
           className="h-full w-full object-cover object-center"
         />
 
-        <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">SALE</span>
+        <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">
+          Sale
+        </span>
       </div>
     </div>
   );

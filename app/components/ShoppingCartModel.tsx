@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -7,10 +7,11 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+
 import Image from "next/image";
 import { useShoppingCart } from "use-shopping-cart";
 
-export default function ShoppingCartModel() {
+export default function ShoppingCartModal() {
   const {
     cartCount,
     shouldDisplayCart,
@@ -38,11 +39,12 @@ export default function ShoppingCartModel() {
         <SheetHeader>
           <SheetTitle>Shopping Cart</SheetTitle>
         </SheetHeader>
+
         <div className="h-full flex flex-col justify-between">
           <div className="mt-8 flex-1 overflow-y-auto">
-            <ul className="my-6 divide-y divide-gray-200">
+            <ul className="-my-6 divide-y divide-gray-200">
               {cartCount === 0 ? (
-                <h1 className="py-6">Cart Is Empty</h1>
+                <h1 className="py-6">You dont have any items</h1>
               ) : (
                 <>
                   {Object.values(cartDetails ?? {}).map((entry) => (
@@ -66,8 +68,10 @@ export default function ShoppingCartModel() {
                             {entry.description}
                           </p>
                         </div>
+
                         <div className="flex flex-1 items-end justify-between text-sm">
                           <p className="text-gray-500">QTY: {entry.quantity}</p>
+
                           <div className="flex">
                             <button
                               type="button"
@@ -85,23 +89,28 @@ export default function ShoppingCartModel() {
               )}
             </ul>
           </div>
+
           <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
             <div className="flex justify-between text-base font-medium text-gray-900">
               <p>Subtotal:</p>
               <p>${totalPrice}</p>
             </div>
             <p className="mt-0.5 text-sm text-gray-500">
-              Shipping and taxes are calculated at checkout
+              Shipping and taxes are calculated at checkout.
             </p>
+
             <div className="mt-6">
-              <Button onClick={handleCheckoutClick} className="w-full">Checkout</Button>
+              <Button onClick={handleCheckoutClick} className="w-full">
+                Checkout
+              </Button>
             </div>
+
             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
               <p>
                 OR{" "}
                 <button
                   onClick={() => handleCartClick()}
-                  className="font-medium text-primary hover:text-primary/80"
+                  className=" font-medium text-primary hover:text-primary/80"
                 >
                   Continue Shopping
                 </button>

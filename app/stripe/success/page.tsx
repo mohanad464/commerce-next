@@ -12,13 +12,12 @@ export default function stripeSuccess() {
             Payment Done!
           </h3>
           <p className="text-gray-600 my-2">
-            Thank you for your purchase we hope you enjoy it
+            Thank you for you pruchase We hope you enjoy it
           </p>
           <p>Have a great day!</p>
+
           <Button asChild className="mt-5">
-            <Link href="/">
-            Go To Home
-            </Link>
+            <Link href="/">GO back</Link>
           </Button>
         </div>
       </div>
